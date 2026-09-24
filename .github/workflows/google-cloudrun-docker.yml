@@ -10,7 +10,7 @@ env:
   REGION: 'us-central1' # TODO: Replace with your preferred region
   SERVICE_NAME: 'sterlinglabz'
   ARTIFACT_REGISTRY_REPO: 'sterlinglabz' # TODO: Replace with your Artifact Registry repository name
-  IMAGE_NAME: 'sterlinglabzwebsite'
+  IMAGE_NAME: 'website'
   
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
             -f website/Dockerfile \
             -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REGISTRY_REPO }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
             -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REGISTRY_REPO }}/${{ env.IMAGE_NAME }}:latest \
-            sterlinglabzwebsite/
+            website/
 
       - name: Push Docker image to Artifact Registry
         run: |
