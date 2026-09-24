@@ -8,9 +8,9 @@ on:
 env:
   PROJECT_ID: 'sterlinglabz' # GCP project ID 
   REGION: 'us-central1' # TODO: Replace with your preferred region
-  SERVICE_NAME: 'SterlingLabz'
-  ARTIFACT_REGISTRY_REPO: 'SterlingLabz' # TODO: Replace with your Artifact Registry repository name
-  IMAGE_NAME: 'SterlingLabzwebsite'
+  SERVICE_NAME: 'sterlingLabz'
+  ARTIFACT_REGISTRY_REPO: 'sterlingLabz' # TODO: Replace with your Artifact Registry repository name
+  IMAGE_NAME: 'sterlingLabzwebsite'
   
 
 jobs:
