@@ -6,11 +6,11 @@ on:
       - main
 
 env:
-  PROJECT_ID: 'sterlinglabz' # GCP project ID 
+  PROJECT_ID: 'kalpakalabs' # GCP project ID 
   REGION: 'us-central1' # TODO: Replace with your preferred region
-  SERVICE_NAME: 'sterlingLabz'
-  ARTIFACT_REGISTRY_REPO: 'sterlingLabz' # TODO: Replace with your Artifact Registry repository name
-  IMAGE_NAME: 'sterlingLabzwebsite'
+  SERVICE_NAME: 'sterlinglabz'
+  ARTIFACT_REGISTRY_REPO: 'sterlinglabz' # TODO: Replace with your Artifact Registry repository name
+  IMAGE_NAME: 'sterlinglabzwebsite'
   
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
             -f website/Dockerfile \
             -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REGISTRY_REPO }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
             -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REGISTRY_REPO }}/${{ env.IMAGE_NAME }}:latest \
-            website/
+            sterlinglabzwebsite/
 
       - name: Push Docker image to Artifact Registry
         run: |
